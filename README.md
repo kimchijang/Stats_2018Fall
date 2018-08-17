@@ -7,7 +7,7 @@
 - Office: N-center, 86335
 - Web: [Cocoan lab](http://cocoanlab.github.io)
 - E-mail: waniwoo@skku.edu
-- Class: Mon 12:00-1:15, Wed 1:30-2:45 at 86314 (N-center 3rd floor)
+- Class: Mon 12:00-1:15, Wed 1:30-2:45 at 86120 (but we could move to a smaller room)
 - Office hours: Wed 10:00-12:00, you can book a time in advance through [https://choongwanwoo.youcanbook.me](https://choongwanwoo.youcanbook.me)
 
 <br>
