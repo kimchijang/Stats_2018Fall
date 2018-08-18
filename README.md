@@ -27,8 +27,7 @@ There is a good github tutorial: [https://rogerdudler.github.io/git-guide/index.
 
 ## What are the aims of this course?
 
-Data are everywhere. Data science already became a key element in many research and industrial areas. The primary aim of this course is to learn basic concepts and skills for data analysis, including concepts of random variables, sampling distributions, hypothesis testing, linear modeling, data visualization, etc., preparing you for your life after the graduation in this data-are-everywhere age. However, this is not the only aim of this class. Statistics goes beyond just data analysis, I believe. Statistics is a way of thinking and reasoning. It helps with scientific reasoning and critical thinking. Thus, I hope this class could provide you with some useful tips for scientific thinking and reasoning. Finally, I'd like to give you some hands-on experience of data analysis. We will use MATLAB as a primary language in class (because that's what I'm good at), but you can use whatever language (e.g., python, R) you want. 
-
+Data are everywhere. Data science already became a key element in many research and industrial areas. The primary aim of this course is to learn basic concepts and skills for data analysis, including concepts of random variables, sampling distributions, hypothesis testing, linear modeling, data visualization, etc., preparing you for your life after the graduation in this data-are-everywhere age. However, this is not the only aim of this class. Statistics goes beyond just data analysis, I believe. Statistics is a way of thinking and reasoning. It helps with scientific reasoning and critical thinking. Thus, I hope this class could provide you with some useful tips for scientific thinking and reasoning. Finally, I'd like to give you some hands-on experience of data analysis. We will mainly use JASP (https://jasp-stats.org) and MATLAB in class.
 
 ## Textbooks
 
