@@ -2,6 +2,10 @@
 % Data: Wani's heart rate (beat per minute) data measured with his apple 
 % watch for two weeks during this July (7/3 (Mon)-7/6 (Fri) and 7/10 (Mon) -7/14 
 % (Fri), 9AM - 6PM)
+%% 0. Path setting
+scriptdir = '/Users/clinpsywoo/Dropbox/2011-yr/Teaching/Stats_2018Fall/scripts'; % you should change this
+addpath(genpath(scriptdir));
+
 %% 1. import data
 %%
 datdir =  '/Users/clinpsywoo/Dropbox/2011-yr/teaching/Stats_2018Fall/data';
@@ -17,7 +21,7 @@ set(gca, 'fontsize', 15, 'box', 'off')
 %% 3. Draw a box plot
 %%
 figure;
-boxplot(dat.data);
+boxplot(dat.data, 'outlier');
 set(gca, 'fontsize', 15, 'box', 'off')
 ylabel('heart rate')
 %% 4. Median (orange vertical line) and Mean (red vertical line)
