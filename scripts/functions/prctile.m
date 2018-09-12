@@ -27,40 +27,19 @@ function y = prctile(x,p,dim)
 %
 %   See also IQR, MEDIAN, NANMEDIAN, QUANTILE.
 
-%   Copyright 1993-2017 The MathWorks, Inc.
+%   Copyright 1993-2015 The MathWorks, Inc.
+
 
 if ~isvector(p) || numel(p) == 0 || any(p < 0 | p > 100) || ~isreal(p)
     error(message('stats:prctile:BadPercents'));
 end
 
-% Make sure we are working in floating point to avoid rounding errors.
-if isfloat(x)
-    castOutput = false;
-elseif isinteger(x)
-    % integer types are up-cast to either double or single and the result
-    % is down-cast back to the input type
-    castOutput = true;
-    outType = internal.stats.typeof(x);
-    if ismember(outType, ["int8" "uint8" "int16" "uint16"])
-        % single precision is enough
-        x = single(x);
-    else
-        % Needs double precision
-        x = double(x);
-    end
-else
-    % All other types (e.g. char, logical) are cast to double and the result is
-    % double
-    castOutput = false;
-    x = double(x);
-end
-
 % Figure out which dimension prctile will work along.
 sz = size(x);
-if nargin < 3 
+if nargin < 3
     dim = find(sz ~= 1,1);
     if isempty(dim)
-        dim = 1; 
+        dim = 1;
     end
     dimArgGiven = false;
 else
@@ -85,20 +64,20 @@ if isempty(x)
         szout = sz; szout(dim) = numel(p);
         y = nan(szout,'like',x);
     end
-
+    
 else
     % Drop X's leading singleton dims, and combine its trailing dims.  This
     % leaves a matrix, and we can work along columns.
     nrows = sz(dim);
     ncols = numel(x) ./ nrows;
     x = reshape(x, nrows, ncols);
-
+    
     x = sort(x,1);
     n = sum(~isnan(x), 1); % Number of non-NaN values in each column
     
     % For columns with no valid data, set n=1 to get nan in the result
     n(n==0) = 1;
-
+    
     % If the number of non-nans in each column is the same, do all cols at once.
     if all(n == n(1))
         n = n(1);
@@ -111,29 +90,25 @@ else
         else
             y = interpColsSame(x,p,n);
         end
-
+        
     else
         % Get percentiles of the non-NaN values in each column.
         y = interpColsDiffer(x,p,n);
     end
-
+    
     % Reshape Y to conform to X's original shape and size.
     szout = sz; szout(dim) = numel(p);
     y = reshape(y,szout);
 end
 % undo the DIM permutation
 if dimArgGiven
-     y = ipermute(y,perm);  
+    y = ipermute(y,perm);
 end
 
 % If X is a vector, the shape of Y should follow that of P, unless an
 % explicit DIM arg was given.
 if ~dimArgGiven && isvector(x)
-    y = reshape(y,size(p)); 
-end
-
-if castOutput
-    y = cast(y, outType);
+    y = reshape(y,size(p));
 end
 
 
@@ -157,20 +132,13 @@ r = r - k;        % R is the ratio between the K and K+1 rows
 k(k<1 | isnan(k)) = 1;
 kp1 = bsxfun( @min, kp1, n );
 
-% Use simple linear interpolation for the valid percentages
-y = (0.5+r).*x(kp1,:)+(0.5-r).*x(k,:);
+% Use simple linear interpolation for the valid precentages
+y = bsxfun(@times, 0.5-r, x(k,:)) + bsxfun(@times, 0.5+r, x(kp1,:));
 
 % Make sure that values we hit exactly are copied rather than interpolated
 exact = (r==-0.5);
 if any(exact)
     y(exact,:) = x(k(exact),:);
-end
-
-% Make sure that identical values are copied rather than interpolated
-same = (x(k,:)==x(kp1,:));
-if any(same(:))
-    x = x(k,:); % expand x
-    y(same) = x(same);
 end
 
 function y = interpColsDiffer(x, p, n)
@@ -199,7 +167,7 @@ offset = nrows*(0:ncols-1);
 k = bsxfun( @plus, k, offset );
 kp1 = bsxfun( @plus, kp1, offset );
 
-% Use simple linear interpolation for the valid percentages.
+% Use simple linear interpolation for the valid precentages.
 % Note that NaNs in r produce NaN rows.
 y = (0.5-r).*x(k) + (0.5+r).*x(kp1);
 
@@ -207,11 +175,4 @@ y = (0.5-r).*x(k) + (0.5+r).*x(kp1);
 exact = (r==-0.5);
 if any(exact(:))
     y(exact) = x(k(exact));
-end
-
-% Make sure that identical values are copied rather than interpolated
-same = (x(k)==x(kp1));
-if any(same(:))
-    x = x(k); % expand x
-    y(same) = x(same);
 end
