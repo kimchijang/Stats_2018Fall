@@ -1,0 +1,25 @@
+"health_data_week_avg.csv" data description:
+
+Who & What: Choong-Wan Woo's heart rate (beat per minute) was measured 
+How: using his apple watch 
+Where: N-center
+When: 7/3 (Mon)-7/6 (Fri) and 7/10 (Mon) -7/14 (Fri), 9AM - 6PM (2017)
+Why: To use the data for the stat class
+
+Data format: 
+The data has 45 rows and 2 columns.
+
+Each row is the data for each week (we have two weeks).
+
+The first row is 7/3 week and the second row is 7/19 week data. 
+
+Each column is the mean heart rate for one hour, and given that the data 
+were measured for 9 hours each day consists of 9 rows. 
+
+Thus, the first 9 rows of the first column is the data from 7/3, and the 
+first row is the mean heart rate between 9AM to 10AM, and the second row is 
+the mean heart rate between 10AM and 11AM, etc. The 9th row of the first 
+column is the mean heart rate between 5PM-6PM. The 10th rwo of the first 
+column is the data for 9AM-10AM of 7/4. etc. 
+
+
