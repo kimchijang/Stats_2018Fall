@@ -50,7 +50,7 @@ This course will combine lectures with some practical hands-on experience of sta
 
 1. Attendance (25%)
 2. Assignments (two times) (10%)
-3. Quizes (three times) (10%)
+3. Quizes (twice) (10%)
 4. Project (10%)
 5. Midterm exam (20%)
 6. Final exam (25%)
