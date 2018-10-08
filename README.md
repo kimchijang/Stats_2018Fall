@@ -69,7 +69,7 @@ Week 2 (9/10,12)    | Displaying and describing data   | Ch. 3-6   |   |
 Week 3 (9/17,19)  | Correlation, Regression 1          | Ch. 7-8   |  |  
 Week 4 (9/24,26)  | No classes (추석)                 
 Week 5 (10/1)     | Regression 2, Sampling (10/3: 개천절)  | Ch. 9-12  | O (10/1) |
-Week 6 (10/8,10\*\*)  | Collecting data, Probability | Ch. 13-16 |   |hw01 (10/8, due 1 week)  
+Week 6 (10/8,10\*\*)  | Collecting data, Probability | Ch. 13-16 |   |[hw01](/hw/hw01/hw01.md) (10/8, due 1 week (BEFORE 10/15 9AM)  
 Week 7 (10/15, 17)    | Random variables, Probability models, Sampling distribution  | Ch. 16-18 |   | hw02 (10/15, due 1 week)
 Week 8 (10/22,24)  | Mid-term           | - | |  
 Week 9 (10/29, 31) | Confidence interval, Hypothesis testing 1          | Ch. 19-20 |   | Project start
