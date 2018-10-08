@@ -70,10 +70,10 @@ Week 3 (9/17,19)  | Correlation, Regression 1          | Ch. 7-8   |  |
 Week 4 (9/24,26)  | No classes (추석)                 
 Week 5 (10/1)     | Regression 2, Sampling (10/3: 개천절)  | Ch. 9-12  | O (10/1) |
 Week 6 (10/8,10\*\*)  | Collecting data, Probability | Ch. 13-16 |   |[hw01](/hw/hw01/hw01.md) (10/8, due 1 week (BEFORE 10/15 9AM)  
-Week 7 (10/15, 17)    | Random variables, Probability models, Sampling distribution  | Ch. 16-18 |   | hw02 (10/15, due 1 week)
+Week 7 (10/15, 17)    | Random variables, Probability models, Sampling distribution  | Ch. 16-18 |   | 
 Week 8 (10/22,24)  | Mid-term           | - | |  
-Week 9 (10/29, 31) | Confidence interval, Hypothesis testing 1          | Ch. 19-20 |   | Project start
-Week 10 (11/5\*\*,7\*\*)  | No classes              |
+Week 9 (10/29, 31) | Confidence interval, Hypothesis testing 1          | Ch. 19-20 |   | hw02 (10/15, due 1 week)
+Week 10 (11/5\*\*,7\*\*)  | No classes              | | | Project starts
 Week 11 (11/12,14) | Hypothesis testing 2 | Ch. 21-22 |   |  
 Week 12 (11/19,21)  | Comparing groups, comparing means  | Ch. 23-25 | | 
 Week 13 (11/26,28)  | Comparing counts, regression  | Ch. 26-27 | O (11/26)  |  
