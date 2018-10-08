@@ -33,7 +33,7 @@ function stats = run_regression_all(x, y)
 %  stats = run_regression_all(x, y);
 
 
-%% draw scatterplot of x and y: subplot(1,2,1)
+%% draw a scatterplot of x and y: subplot(1,2,1)
 
 figure;
 subplot(1,2,1);
